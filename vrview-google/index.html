@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <title>VRViewTest</title>
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <script src="./vrview-gh-pages/build/vrview.min.js"></script>
+</head>
+<body>
+<div>
+  VR View test
+  <div id="vrview"></div>
+</div>
+<script>
+  window.addEventListener('load', onVrViewLoad);
+  function onVrViewLoad() {
+    var vrView = new VRView.Player('#vrview', {
+      image: './img/output_text.jpg', //画像を埋め込みたい場合。値にパスを指定。
+      width: '100%', //コンテンツの幅を指定。
+      height: '700px', //コンテンツの高さを指定。
+    });
+  }
+</script>
+</body>
+</html>
